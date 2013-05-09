@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html manifest="offlinedatabase.manifest">
+   <head>
+      <title>Offline HTML5 SQLite - blog.vilourenco.com.br</title>
+   	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   	<meta name="viewport" content="width=480; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+      <script type="text/javascript" src="offlinedatabaseJS.js" ></script>
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css" />
+      <script src="jquery-1.4.3.min.js"></script>
+      <script src="jquery.mobile-1.0a1.min.js"></script>
+      <style>body { font-family:Verdana, Geneva, sans-serif; font-size:11px; }</style>
+   </head>
+   <body onload="onInit()">
+      <div data-role="page">
+         <div data-role="header">
+            <h1>Exemplo com PhoneGap</h1>
+         </div>
+         <div data-role="content">
+            <h3>Dados:</h3>
+            <ul  id="itemData" style="cursor:pointer;">
+            </ul>
+            
+            <h3>Detalhes:</h3>
+            <form name="itemForm">
+               <div data-role="fieldcontain">
+                  <label for="id">Id:</label>
+                  <input type="text" name="id" id="id" size=2 disabled="true"/>
+               </div>
+               <div data-role="fieldcontain">
+                  <label for="nome">Nome:</label>
+                  <input type="text" name="nome" id="nome" size=10/>
+               </div>
+               <div data-role="fieldcontain">
+                  <label for="idade">Idade</label>
+                  <input type="text" name="idade" id="idade" size=3 /> <br>
+               </div>
+               <br />
+               <div class="ui-body-b">
+                  <fieldset class="ui-grid-a">
+                     <div class="ui-block-c">
+                        <input type="button" name="create" value="Create" onclick="onCreate()" data-theme="d"/>
+                     </div>
+                     <div class="ui-block-c">
+                        <input type="button" name="update" value="Update" onclick="onUpdate()" data-theme="a"/>
+                     </div>
+                     <div class="ui-block-c">
+                        <input type="button" name="delete" value="Delete" onclick="onDelete()" data-theme="d"/>
+                     </div>
+                  </fieldset>
+               </div>
+            </form>
+            <h4>Status:</h4>
+            <div id="status"></div>
+         </div>
+         <div data-role="footer">
+            <h3>Prof. Angelo Augusto Frozza</h3>
+         </div>
+      </div>
+   </body>
+</html>
